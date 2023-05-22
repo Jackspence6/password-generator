@@ -82,12 +82,12 @@ console.log(initialPassword);
 function concatenateRandomPassword(str, count) {
   var stage1PW = [];
 
-  for (let i = 0; i < count.length; i++) {
+  for (let i = 0; i < count; i++) {
     var randomIndex = Math.floor(Math.random() * str.length);
-    var randomCharacters = str.charAt(randomIndex);
+    var randomCharacters = str[randomIndex];
     stage1PW.push(randomCharacters);
   }
-return randomCharacters;
+return stage1PW;
 
 }
 
