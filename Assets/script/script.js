@@ -95,5 +95,8 @@ var result1 = concatenateRandomPassword(initialPassword, passwordLength);
 
 console.log(result1);
 
+var result2 = result1.toString();
+console.log(result2);
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
