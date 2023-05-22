@@ -10,6 +10,14 @@ function writePassword() {
 
 }
 
+/* --------------------------------- password character options --------------------------------- */
+const passwordOptions = {
+  lowercaseCharacters: "abcdefghijklmnopqrstuvwxyz",
+  uppercaseCharacters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  numericCharacters: "1234567890",
+  specialCharacters: "!@#$%&'()*+,^-./:;<=>?[]_`{~}|",
+};
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
