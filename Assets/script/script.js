@@ -77,7 +77,6 @@ function createPassword() {
 
 console.log(initialPassword);
 
-
 /* ----------------------- function to add correct quantity of characters at random---------------------- */
 function concatenateRandomPassword(str, count) {
   var stage1PW = [];
@@ -87,14 +86,15 @@ function concatenateRandomPassword(str, count) {
     var randomCharacters = str[randomIndex];
     stage1PW.push(randomCharacters);
   }
-return stage1PW;
-
+  return stage1PW;
 }
 
 var result1 = concatenateRandomPassword(initialPassword, passwordLength);
 
 console.log(result1);
 
+/* ------------------------------------- Password formatting ------------------------------------ */
+// Change array to string
 var result2 = result1.toString();
 console.log(result2);
 
@@ -104,8 +104,7 @@ var result3 = result2.replace(/'/g, "");
 // Remove commas
 var result4 = result3.replace(/,\s*/g, "");
 
-console.log(result4); 
-
+console.log(result4);
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
