@@ -77,21 +77,21 @@ function createPassword() {
 
 console.log(initialPassword);
 
-/* ----------------------- function to add correct quantity of characters ---------------------- */
-function concatenateCharacters(initialPassword, passwordLength) {
-  var stage1PW = "";
 
-  for (var i = 0; i < passwordLength && i < initialPassword.length; i++) {
-    stage1PW += initialPassword.charAt(i);
+/* ----------------------- function to add correct quantity of characters at random---------------------- */
+function concatenateRandomPassword(str, count) {
+  var stage1PW = [];
+
+  for (let i = 0; i < count.length; i++) {
+    var randomIndex = Math.floor(Math.random() * str.length);
+    var randomCharacters = str.charAt(randomIndex);
+    stage1PW.push(randomCharacters);
   }
+return randomCharacters;
 
-  return stage1PW;
 }
 
-var inputString = initialPassword;
-var characterCount = passwordLength;
-var result1 = concatenateCharacters(inputString, characterCount);
-
+var result1 = concatenateRandomPassword(initialPassword, passwordLength);
 
 console.log(result1);
 
