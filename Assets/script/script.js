@@ -98,5 +98,14 @@ console.log(result1);
 var result2 = result1.toString();
 console.log(result2);
 
+//Remove quotes
+var result3 = result2.replace(/'/g, "");
+
+// Remove commas
+var result4 = result3.replace(/,\s*/g, "");
+
+console.log(result4); 
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
