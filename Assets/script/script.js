@@ -39,7 +39,7 @@ if (passwordLength >= 8 && passwordLength <= 128) {
 } else {
   console.log("not valid count");
 }
-
+/* ------------------------------- function to create the password ------------------------------ */
 function createPassword() {
   if (lCaseChars) {
     console.log("yes");
@@ -77,7 +77,22 @@ function createPassword() {
 
 console.log(initialPassword);
 
+/* ----------------------- function to add correct quantity of characters ---------------------- */
+function concatenateCharacters(initialPassword, passwordLength) {
+  var stage1PW = "";
+
+  for (var i = 0; i < passwordLength && i < initialPassword.length; i++) {
+    stage1PW += initialPassword.charAt(i);
+  }
+
+  return stage1PW;
+}
+
+var inputString = initialPassword;
+var characterCount = passwordLength;
+var stage1PW = stage1PW(inputString, characterCount);
+
+console.log(result);
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
