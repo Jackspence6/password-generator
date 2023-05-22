@@ -90,9 +90,10 @@ function concatenateCharacters(initialPassword, passwordLength) {
 
 var inputString = initialPassword;
 var characterCount = passwordLength;
-var stage1PW = stage1PW(inputString, characterCount);
+var result1 = concatenateCharacters(inputString, characterCount);
 
-console.log(result);
+
+console.log(result1);
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
