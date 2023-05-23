@@ -17,25 +17,29 @@ function writePassword() {
   /* -------------------------------------- initial password -------------------------------------- */
   var initialPassword = "";
 
-  /* ------------------------------------- questions for users ------------------------------------ */
+  /* ----------------------- questions for user to determine password length ---------------------- */
   const passwordLength = window.prompt(
-    "how many characters do you want your password to be?"
+    "How many characters do you want your password to be?"
   );
-  const lCaseChars = window.confirm(
-    "Do you want to include lowerCase characters?"
-  );
-  const uCaseChars = window.confirm(
-    "Do you want to include upperCase characters?"
-  );
-  const nums = window.confirm("Do you want to include numbers?");
-  const sChars = window.confirm("Do you want to include special characters?");
 
   /* ----------------------- if statement to ensure character count is valid ---------------------- */
   if (passwordLength >= 8 && passwordLength <= 128) {
+    const lCaseChars = window.confirm(
+      "Do you want to include lowercase characters?"
+    );
+    const uCaseChars = window.confirm(
+      "Do you want to include uppercase characters?"
+    );
+    const nums = window.confirm("Do you want to include numbers?");
+    const sChars = window.confirm("Do you want to include special characters?");
+
     createPassword();
   } else {
-    console.log("not valid count");
+    console.log("Invalid character count. Password not generated.");
+    // Stop password creation if character count is invalid
+    return;
   }
+
   /* ------------------------------- function to create the password ------------------------------ */
   function createPassword() {
     if (lCaseChars) {
@@ -108,8 +112,8 @@ function writePassword() {
   console.log(result4);
 
   /* ----------------------- Assigning the password to the HTML text element ---------------------- */
-   var passwordText = document.querySelector("#password");
-   passwordText.value = result4;
+  var passwordText = document.querySelector("#password");
+  passwordText.value = result4;
 }
 
 // Add event listener to generate button
