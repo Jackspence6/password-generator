@@ -19,7 +19,8 @@ function writePassword() {
 
   /* ----------------------- questions for user to determine password length ---------------------- */
   const passwordLength = window.prompt(
-    "How many characters do you want your password to be?\n" + "Please select a number between 8 and 128."
+    "How many characters do you want your password to be?\n" +
+      "Please select a number between 8 and 128."
   );
 
   /* ----------------------- if statement to ensure character count is valid ---------------------- */
@@ -50,7 +51,7 @@ function writePassword() {
 
     if (!lCaseChars && !uCaseChars && !nums && !sChars) {
       console.log("Invalid password characteristic count");
-      window.alert("Please select at least 1 option!")
+      window.alert("Please select at least 1 option!");
       // Stop password creation if character count is invalid
       return;
     }
@@ -58,7 +59,7 @@ function writePassword() {
     createPassword();
   } else {
     console.log("Invalid character count. Password not generated.");
-    window.alert("Please select a number between 8 and 128!")
+    window.alert("Please select a number between 8 and 128!");
 
     // Stop password creation if character count is invalid
     return;
