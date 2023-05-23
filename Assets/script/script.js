@@ -48,6 +48,12 @@ function writePassword() {
     nums = numsResponse;
     sChars = sCharsResponse;
 
+    if (!lCaseChars && !uCaseChars && !nums && !sChars) {
+      console.log("Invalid password characteristic count");
+      // Stop password creation if character count is invalid
+      return;
+    }
+
     createPassword();
   } else {
     console.log("Invalid character count. Password not generated.");
