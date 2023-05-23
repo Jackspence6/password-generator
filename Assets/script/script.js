@@ -19,7 +19,7 @@ function writePassword() {
 
   /* ----------------------- questions for user to determine password length ---------------------- */
   const passwordLength = window.prompt(
-    "How many characters do you want your password to be?"
+    "How many characters do you want your password to be?\n" + "Please select a number between 8 and 128."
   );
 
   /* ----------------------- if statement to ensure character count is valid ---------------------- */
