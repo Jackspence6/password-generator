@@ -24,18 +24,34 @@ function writePassword() {
 
   /* ----------------------- if statement to ensure character count is valid ---------------------- */
   if (passwordLength >= 8 && passwordLength <= 128) {
-    const lCaseChars = window.confirm(
+    // Initialize constants with default value
+    var lCaseChars = false;
+    var uCaseChars = false;
+    var nums = false;
+    var sChars = false;
+
+    // Questions for users to determine password characteristics
+    const lCaseCharsResponse = window.confirm(
       "Do you want to include lowercase characters?"
     );
-    const uCaseChars = window.confirm(
+    const uCaseCharsResponse = window.confirm(
       "Do you want to include uppercase characters?"
     );
-    const nums = window.confirm("Do you want to include numbers?");
-    const sChars = window.confirm("Do you want to include special characters?");
+    const numsResponse = window.confirm("Do you want to include numbers?");
+    const sCharsResponse = window.confirm(
+      "Do you want to include special characters?"
+    );
+
+    // Assign users response to variables
+    lCaseChars = lCaseCharsResponse;
+    uCaseChars = uCaseCharsResponse;
+    nums = numsResponse;
+    sChars = sCharsResponse;
 
     createPassword();
   } else {
     console.log("Invalid character count. Password not generated.");
+
     // Stop password creation if character count is invalid
     return;
   }
