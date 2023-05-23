@@ -50,6 +50,7 @@ function writePassword() {
 
     if (!lCaseChars && !uCaseChars && !nums && !sChars) {
       console.log("Invalid password characteristic count");
+      window.alert("Please select at least 1 option!")
       // Stop password creation if character count is invalid
       return;
     }
