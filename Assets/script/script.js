@@ -58,6 +58,7 @@ function writePassword() {
     createPassword();
   } else {
     console.log("Invalid character count. Password not generated.");
+    window.alert("Please select a number between 8 and 128!")
 
     // Stop password creation if character count is invalid
     return;
