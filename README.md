@@ -1,5 +1,17 @@
 # password-generator
 
+## Description
+
+**The code highlights basic usage of:**
+
+* Variable declarations
+* If/Else logic
+* Looping
+* Functions and passing objects between functions
+
+## Installation:
+There are no installation requirements except to open the single `index.html` page or visit the page: <https://jackspence6.github.io/password-generator/>.
+
 # Your Task
 
 This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
